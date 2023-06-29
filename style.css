@@ -37,3 +37,37 @@
     color: #fff;
     cursor: pointer;
 }
+
+.reset-button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+.input-field input,
+.button button{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+
+.message.active {
+    display: block;
+}
+
+.button button {
+    background: #826afb;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button button:active {
+    transform: scale(0.99);
+}
+
+.button.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}

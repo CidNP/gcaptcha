@@ -21,4 +21,43 @@ const generateCaptcha = () => {
     console.log(captchaText);
 };
 
+const resetBtnClick = () => {
+    generateCaptcha();
+    captchaInputBox.value = "";
+    captchaKeyUpValidate();
+}
 
+const captchaKeyUpValidate = () => {
+    //toggle submit button disable class based on captcha input field.
+    submitButton.classList.toggle("disabled", !captchaInputBox.value);
+
+    if (!captchaInputBox.value) message.classList.remove("active");
+};
+
+//function to validate the enetered captcha
+
+const submitBtnClick = () => {
+    captchaText = captchaText
+        .split("")
+        .filter((char) => char !== " ")
+        .join("");
+    message.classList.add("active");
+
+    //Check if the entered captcha text is correct or not
+    if (captchaInputBox.value === captchaText) {
+        message.innerText = "Captcha Correct";
+        message.style.color = "#FF2525";
+    } else{
+        message.innerText = "Captcha Incorrect";
+        message.style.color = "#FF2525"
+    }
+};
+
+
+// add event listeners for the reset button, captchaInputBox, submit button
+resetButton.addEventListener("click", refreshBtnClick);
+captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
+submitButton.addEventListener("click", submitBtnClick);
+
+//generate a captcha when the page loads
+generateCaptcha();

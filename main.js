@@ -55,7 +55,7 @@ const submitBtnClick = () => {
 
 
 // add event listeners for the reset button, captchaInputBox, submit button
-resetButton.addEventListener("click", refreshBtnClick);
+resetButton.addEventListener("click", resetBtnClick);
 captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
 submitButton.addEventListener("click", submitBtnClick);
 

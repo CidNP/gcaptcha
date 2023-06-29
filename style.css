@@ -17,3 +17,23 @@
     text-align: center;
 }
 
+.input-field {
+    position: relative;
+    height: 45px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.reset-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: #826afb;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}

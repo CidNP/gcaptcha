@@ -46,7 +46,7 @@ const submitBtnClick = () => {
     //Check if the entered captcha text is correct or not
     if (captchaInputBox.value === captchaText) {
         message.innerText = "Captcha Correct";
-        message.style.color = "#FF2525";
+        message.style.color = "#008000";
     } else{
         message.innerText = "Captcha Incorrect";
         message.style.color = "#FF2525"
